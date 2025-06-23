@@ -1,81 +1,152 @@
 body {
-      margin: 0;
-        font-family: 'Poppins', sans-serif;
-          background: #f4f7fa;
-            color: #333;
-              line-height: 1.6;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #f4f7fa;
+  color: #333;
+  line-height: 1.7;
 }
 
 header {
-      background: #003366;
-        color: #fff;
-          padding: 40px 20px;
-            text-align: center;
+  background: #003366;
+  color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+  animation: fadeInDown 1s ease-out forwards;
 }
 
 header h1 {
-      margin: 0;
-        font-size: 2.8rem;
+  margin: 0;
+  font-size: 3rem;
 }
 
 header p {
-      margin-top: 10px;
-        font-size: 1.2rem;
+  margin-top: 10px;
+  font-size: 1.2rem;
 }
 
 section {
-      padding: 40px 20px;
-        max-width: 1000px;
-          margin: auto;
+  padding: 40px 20px;
+  max-width: 1150px;
+  margin: auto;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1.2s ease-out forwards;
 }
 
 h2 {
-      color: #003366;
-        font-size: 2rem;
-          margin-bottom: 20px;
+  color: #003366;
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  border-left: 5px solid #003366;
+  padding-left: 12px;
+}
+
+h3 {
+  color: #00509e;
+  font-size: 1.6rem;
+  margin-top: 35px;
+}
+
+h4 {
+  color: #004080;
+  font-size: 1.3rem;
+  margin-top: 25px;
 }
 
 ul {
-      list-style: none;
-        padding: 0;
+  list-style: none;
+  padding: 0;
 }
 
 ul li {
-      padding: 10px 0;
-        border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+  font-size: 1.05rem;
+}
+
+ul li::before {
+  content: "✔ ";
+  color: #00509e;
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+p {
+  font-size: 1.05rem;
 }
 
 footer {
-      background: #003366;
-        color: #fff;
-          text-align: center;
-            padding: 20px;
-              margin-top: 40px;
+  background: #003366;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  animation: fadeInUp 1s ease-out forwards;
 }
 
-.fade-in {
-      opacity: 0;
-        transform: translateY(30px);
-          animation: fadeInUp 1.2s ease-out forwards;
-            animation-delay: 0.3s;
+/* Enquiry Button Styling */
+.enquiry-btn {
+  display: inline-block;
+  background: #00509e;
+  color: #fff;
+  padding: 14px 30px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  margin-top: 22px;
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
+.enquiry-btn:hover {
+  background: #003366;
+  transform: scale(1.05);
+}
+
+/* Animations */
 @keyframes fadeInUp {
-      to {
-            opacity: 1;
-                transform: translateY(0);
-      }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-      }
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
+
+/* Contact Section Styling */
+.contact p {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
 }
-}
-}
-}
-}
-}
-}
-}
-}
+
+/* Responsive */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2.2rem;
+  }
+
+  header p {
+    font-size: 1rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  h3 {
+    font-size: 1.4rem;
+  }
+
+  .enquiry-btn {
+    padding: 12px 25px;
+    font-size: 1rem;
+  }
 }
